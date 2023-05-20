@@ -1,0 +1,45 @@
+.btn{
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor:hover{
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 1px 1px whitesmoke;
+}
+.link:hover{
+   opacity: 0.6;
+}
+.scholarship-container::-webkit-scrollbar {
+    display: none; 
+     /* hide scrollbar of container for chrome browser and brave */
+}
+.scholarship-item:hover{
+    opacity: 0.95;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.582);
+}
+@keyframes marquee {
+    0%{
+        transform: translateY(40%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+.notice-container ul:hover{
+    animation-play-state: paused;
+}
+.achiever-container ol:hover{
+    animation-play-state: paused;
+}

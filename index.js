@@ -6,7 +6,7 @@ const path = require('path');
 const connect = require('./config/scholarship_details');
 
 //for connection to the schema of databases
-const {scholarship} = require('./models/scholarship_model');
+const {Scholarship} = require('./models/scholarship_model');
 
 const app = express();
 
@@ -14,16 +14,41 @@ const app = express();
 // parser is used to read data enterd by user and store it.
 app.use(express.urlencoded());
 app.use(express.json());
-app.use(express.static('assets'));
 
-app.post('/scholarships',(req,res) =>{
-    const details = req.body;
+//to use css using static
+app.use(express.static(path.join(__dirname, '/assets')));
+
+
+// Route to display the HTML page
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+  });
+
+app.get('/eligibility',(req,res) =>{
+    res.sendFile(__dirname + '/check-eligibility.html');
 });
+
+app.get('/privacy-policy',(req,res) =>{
+  res.sendFile(__dirname + '/privacy-policy.html');
+});
+
+app.get('/contact-us',(req,res) =>{
+  res.sendFile(__dirname + '/contact-us.html');
+});
+
+app.get('/about',(req,res) =>{
+  res.sendFile(__dirname + '/about.html');
+});
+
+
+// app.post('/scholarships',(req,res) =>{
+//     const details = req.body;
+// });
 
 // Read Operation
 app.get('/scholarships/:id', (req, res) => {
     const scholarshipId = req.params.id;
-    scholarship.findById(scholarshipId)
+    Scholarship.findById(scholarshipId)
       .then(scholarship => {
         if (!scholarship) {
           res.status(404).json({ error: 'Scholarship not found' });
@@ -41,7 +66,7 @@ app.put('/scholarships/:id', (req, res) => {
     const scholarshipId = req.params.id;
     const { name, scholarship_no, description, closing_date, category, nationality } = req.body;
   
-    scholarship.findByIdAndUpdate(scholarshipId, {
+    Scholarship.findByIdAndUpdate(scholarshipId, {
       name,
       scholarship_no,
       description,
@@ -59,6 +84,36 @@ app.put('/scholarships/:id', (req, res) => {
         res.status(500).json({ error: 'Failed to update scholarship' });
       });
   });
+
+  //below code will handle search and filter requests
+  //we have to create a route for this
+  app.get('/filter', async (req, res) => {
+    const { keyword, nationality, scholarship_no } = req.query;
+    let query = {};
+  
+    // Apply filters
+    if (scholarship_no) {
+      query.scholarship_no = scholarship_no;
+    }
+    if (nationality) {
+      query.nationality = nationality;
+    }
+    if (keyword) {
+      query.$or = [
+        { name: { $regex: keyword, $options: 'i' } },
+        { description: { $regex: keyword, $options: 'i' } }
+      ];
+    }
+  
+    try {
+      // Retrieve scholarships based on the query
+      const retrieved_scholarships = await Scholarship.find(query);
+      res.json(retrieved_scholarships);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to retrieve scholarships' });
+    }
+  });
+  
   
 
 

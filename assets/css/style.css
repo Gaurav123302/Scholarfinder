@@ -10,6 +10,7 @@
     /* scrollbar-width: none;   */
     --main-color: #454591;
     --main-color2: white;
+    scroll-behavior: smooth;
 }
 .nav-header{
     height: 80px;
@@ -28,11 +29,12 @@
     align-items: center;
     justify-content: space-between;
     width: 50rem;
-    color: white;
     font-size: 18px;
 }
-.main-links li{
+
+.main-links li a{
     text-decoration: none;
+    color: white;
 }
 .logo{
     font-family: 'Orbitron', sans-serif;
@@ -123,7 +125,7 @@ line-height: 1.6;
     padding: 10px 20px;
     color: var(--main-color);
     overflow: hidden;
-    height: 22.8rem;
+    height: 23.49rem;
     line-height: 2;
     font-size: 18px;
     border: 2px solid black;
@@ -136,23 +138,25 @@ line-height: 1.6;
 .ns-container{
    height: 100%;
    width: calc(100% - 18rem);
+   /* background-color: brown; */
 }
 #national-scholarships{
-    margin: 10px 0px 10px 119px;
+    margin: 10px 0px 10px 92px;
     color: var(--main-color);
 }
 .scholarship-container{
- height: 94%;
- width: 90%;
- margin: 10px auto;
- padding: 20px;
+ height: 95.1%;
+ width: 100%;
+margin-top: 11px;
  display: flex;
  flex-direction: column;
  overflow: scroll;
  scrollbar-width: none;  
      /*  hide scrollbar for firefox  */
  scroll-behavior: smooth;
- border: 2px solid black;
+ /* border: 2px solid black; */
+ border-left: none;
+ background-color: rgb(236, 228, 228);
 }
 
 .scholarship-item{
@@ -189,4 +193,46 @@ line-height: 1.6;
 .description{
     height: 80px;
     width: 100%;
+}
+.main2-container{
+    margin-top: 10rem;
+}
+.ins-container{
+    height: 100%;
+    width: calc(100% - 18rem);
+    margin-top: 20px;
+}
+#international-scholarships{
+    margin-left: 92px;
+    color: var(--main-color);
+}
+.ads-container{
+    margin-top: 59px;
+    background-color: aqua; 
+    height: 95.1%;
+}
+.footer-container{
+    background-color: var(--main-color);
+    color: white;
+    height: 20rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+/* .footer-links-container{
+     /* margin-left: 2; */
+ */
+.footer-links-container ul{
+    list-style: none;
+    
+}
+.footer-links-container li a{
+    text-decoration: none;
+    color: white;
+    line-height: 2;
+}
+.copyright{
+    margin-top: 13rem;
 }

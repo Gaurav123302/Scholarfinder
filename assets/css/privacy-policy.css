@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color:  #454591;
+    padding: 90px 180px ;
+}
+.heading{
+    text-align: center;
+}
+.main-heading{
+    margin-top: 70px;
+}
+.main2-heading{
+  margin-top: 30px;
+}
+.para{
+    line-height: 2;
+    font-size: 17px;
+
+}
+.list{
+    list-style:lower-latin;
+    list-style-position: inside;
+    line-height: 1.8;
+    font-size: 16px;
+}

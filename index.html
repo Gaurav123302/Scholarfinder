@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Schoolarships, check Schoolarships and Find The Schoolarships That Match With Your Preferences</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/utiles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/utiles.css">
 </head>
 <body>
     <header class="nav-header">
         <nav class="nav-bar">
             <ul class="main-links ">
                 <li><a href="index.html" class="logo flex-all-center">
-                    <img src="./assets/images/logo.png" alt="logo"> SCHOLARFINDER</a></li>
-                <li class="cursor link">National Scholarsips</li>
-                 <li class="cursor link">International Scholarsips</li>
-                  <li class="cursor link">Check Eligibility</li>
+                    <img src="/images/logo.png" alt="logo" id="scholarfinder"> SCHOLARFINDER</a></li>
+                <li class="cursor link"> <a href="#national-scholarships"> National Scholarsips</a></li>
+                 <li class="cursor link"><a href="#international-scholarships">International Scholarsips</a></li>
+                  <li class="cursor link"><a href="check-eligibility.html" target="_blank">Check Eligibility</a></li>
             </ul>
             <div class="btn-container ">
-                <button class="btn cursor" id="login-btn">Login</button>
+                <button class="btn cursor" id="login-btn"  >Login</button>
                 <button class="btn cursor" id="register-btn">Register</button>
             </div>
             
@@ -33,9 +33,21 @@
         <div class="cursor" >Search</div>
     </div>
     </div>
+
+    <div class="login-container" id="login-template">
+        <div class="ep-container"><label for="email">Enter Email:</label><input type="email" placeholder="abc@gmail.com" id="email" class="in-fld"></div>
+        <div class="ep-container"> <label for="password">Enter Password:</label><input type="password" id="password" class="in-fld"></div>
+     <p class="forgot">Forgot<a href="#" class="fgt-link">Password?</a></p>
+     <div class="l-btn-container"> 
+        <button class="btn cursor tbtn cbtn">Cancel</button>
+        <button class="btn cursor tbtn">Login</button>
+    </div>
+    <p class="n-register">Don't have any account?<a href="#" class="fgt-link">Register</a></p>
+    </div>
+
     <section class="main-container">   
       <div class="info-container">
-        <p>NOTICE</p>
+        <p id="notice">NOTICE</p>
         <div class="notice-container">
             <ul>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, labore. </li>
@@ -48,7 +60,7 @@
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, labore. </li>
             </ul>
         </div>
-        <p>Scholar achiever</p>
+        <p id="scholar-achiever">Scholar achiever</p>
         <div class="achiever-container">
             <ol type="1">
                 <li>AMAN SINGH </li>
@@ -161,10 +173,97 @@
         </div>
        </div>
     </section>
+
+     <section class="main-container main2-container">
+        <div class="ins-container">
+            <h2 id="international-scholarships">INTERNATIONAL SCHOLARSHIPS</h2>
+            <div class="scholarship-container">
+                <div class="pair">
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank" >Who Can Apply: <span>only Indian</span></div>
+                        <div class="last-date blank" >Last Date: <span>30 May 2023</span></div>
+                        <div class="category blank" >Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+        
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank">Eligible: <span>only Indian</span></div>
+                        <div class="last-date blank">Last Date: <span>30 May 2023</span></div>
+                        <div class="Category blank">Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+                </div>
+                <div class="pair">
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank" >Who Can Apply: <span>only Indian</span></div>
+                        <div class="last-date blank" >Last Date: <span>30 May 2023</span></div>
+                        <div class="category blank" >Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+        
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank">Eligible: <span>only Indian</span></div>
+                        <div class="last-date blank">Last Date: <span>30 May 2023</span></div>
+                        <div class="Category blank">Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+                </div>
+                <div class="pair">
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank" >Who Can Apply: <span>only Indian</span></div>
+                        <div class="last-date blank" >Last Date: <span>30 May 2023</span></div>
+                        <div class="category blank" >Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+        
+                    <div class="scholarship-item">
+                        <h3 class="scholarship-name">Name Of Scholarship</h3>
+                        <div class="nation blank">Eligible: <span>only Indian</span></div>
+                        <div class="last-date blank">Last Date: <span>30 May 2023</span></div>
+                        <div class="Category blank">Category: <span>SC , ST</span></div>
+                        <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                        <button class="btn cursor view-btn">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="info-container ads-container"></div>
+     </section>
+    
     </main>
-    <footer></footer>
-<script src="./assets/js/three.r134.min.js"></script>
-<script src="./assets/js/vanta.waves.min.js"></script>
+    <footer class="footer-container ">
+     <div class="footer-links-container">
+        <ul>
+     <li class="link"><a href="#scholarfinder">Home</a></li>
+     <li class="link"><a href="http://localhost:5600/about" target="_blank">About</a></li>
+     <li class="link"><a href="http://localhost:5600/contact-us" target="_blank">Contact us</a></li>
+     <li class="link"><a href="http://localhost:5600/privacy-policy" target="_blank">Privacy policy</a></li>
+
+        </ul>
+     </div>
+     <div class="footer-links-container">
+        <ul>
+            <li class="link"><a href="#national-scholarships">National Scholarships</a></li>
+            <li class="link"><a href="#international-scholarships">InterNational Scholarships</a></li>
+            <li class="link"><a href="check-eligibility.html" target="_blank">Check eligibility</a></li>
+            <li class="link"><a href="#notice">Notice</a></li>
+            <li class="link"><a href="#scholar-achiever">Scholars achiever</a></li>
+        </ul>
+     </div>
+      <p class="copyright">&#169;2023 Scholarship Portal. All Rights Reserved.</p>
+    </footer>
+<script src="/js/three.r134.min.js"></script>
+<script src="/js/vanta.waves.min.js"></script>
 <script>
     VANTA.WAVES({
       el: "#mid-container",

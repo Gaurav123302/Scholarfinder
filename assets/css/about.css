@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color:  #454591;
+    padding: 90px 180px ;
+}
+.heading{
+    text-align: center;
+}
+.main-heading{
+    margin-top: 70px;
+}
+
+.para{
+    line-height: 2;
+    font-size: 17px;
+}

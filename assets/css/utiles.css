@@ -29,6 +29,16 @@
     opacity: 0.95;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.582);
 }
+.fgt-link:hover{
+    color: black;
+    text-decoration: underline;
+}
+.notice-container ul:hover{
+    animation-play-state: paused;
+}
+.achiever-container ol:hover{
+    animation-play-state: paused;
+}
 @keyframes marquee {
     0%{
         transform: translateY(40%);
@@ -36,10 +46,4 @@
     100%{
         transform: translateY(-100%);
     }
-}
-.notice-container ul:hover{
-    animation-play-state: paused;
-}
-.achiever-container ol:hover{
-    animation-play-state: paused;
 }

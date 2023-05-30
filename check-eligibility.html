@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHECK ELIGIBILITY</title>
     <link rel="stylesheet" href="/css/check-eligibility.css">
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </head>
+
 <body>
     <div class="check-container">
         <h3>Check Eligibility</h3>
         <form action="#" id="form">
             <div>
-                <label for="income">Enter  Annual Family Income</label><input type="text" id="income" placeholder="for eg: 100000" class="ifd">
+                <label for="income">Enter Annual Family Income</label>
+                <input type="text" id="income" placeholder="for eg: 100000" class="ifd">
             </div>
 
             <div>
-                <label for="nationality">Enter your Nationality</label><input type="text" id="nationality" placeholder="for eg: india" class="ifd">
+                <label for="nationality">Enter your Nationality</label>
+                <input type="text" id="nationality" placeholder="for eg: india" class="ifd">
             </div>
 
-             <div>
-                <label for="Choose-Caste">Coose Your Caste</label><select name="Caste" id="Choose-Caste" class="ifd">
+            <div>
+                <label for="Choose-Caste">Coose Your Caste</label>
+                <select name="Caste" id="Choose-Caste" class="ifd">
                     <option value="sc">SC</option>
                     <option value="st">ST</option>
                     <option value="obc">OBC</option>
                     <option value="ews">EWS</option>
                     <option value="gen">GEN</option>
                     <option value="other">Others</option>
-                </select> 
-             </div>
-
-            <div>
-             <label for="state">Enter Your State</label><input type="text" id="state" placeholder="for eg: haryana" class="ifd">
-            </div>
-
-            <div>
-                <label for="education">Choose Your Qualification</label><select name="education" id="education" class="ifd">
-                 <option value="below 10th">Below 10th Standard</option>
-                 <option value="10th">10th pass</option>
-                 <option value="12th">12th pass</option>
-                 <option value="diploma">Diploma</option>
-                 <option value="graduation">Graduation</option>
-                 <option value="post graduation">Post Graduation</option>
-                 <option value="phd">PHD</option>
-                 <option value="Others">Others</option>
                 </select>
             </div>
 
-           <div>
-            <p class="hd-disability">Any Physical Disability?</p>
-            <label for="yes" class="lbl-yes">YES</label><input type="radio" value="yes" id="yes" name="disability"><label for="no">NO</label><input type="radio" value="no" id="no" name="disability">
-           </div>
+            <div>
+                <label for="state">Enter Your State</label>
+                <input type="text" id="state" placeholder="for eg: haryana" class="ifd">
+            </div>
+
+            <div>
+                <label for="education">Choose Your Qualification</label>
+                <select name="education" id="education" class="ifd">
+                    <option value="below 10th">Below 10th Standard</option>
+                    <option value="10th">10th pass</option>
+                    <option value="12th">12th pass</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="graduation">Graduation</option>
+                    <option value="post graduation">Post Graduation</option>
+                    <option value="phd">PHD</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <p class="hd-disability">Any Physical Disability?</p>
+                <label for="yes" class="lbl-yes">YES</label><input type="radio" value="yes" id="yes"
+                    name="disability"><label for="no">NO</label><input type="radio" value="no" id="no"
+                    name="disability">
+            </div>
 
             <div>
                 <input type="reset" value="reset" class="btn reset-btn">
-                <input type="submit" value="Check" class="btn check-btn">
+                <input id="submit" type="submit" value="Check" class="btn check-btn">
             </div>
 
         </form>
-    </div>
+        <!-- <div id="scholarship-container" class="scholarship-container">
+            <div class="scholarship-item">
+                <h3 class="scholarship-name">Name Of Scholarship</h3>
+                <div class="nation blank">Who Can Apply: <span>only Indian</span></div>
+                <div class="last-date blank">Last Date: <span>30 May 2023</span></div>
+                <div class="category blank">Category: <span>SC , ST</span></div>
+                <div class="description">description of the Scholarship that provide a sort idea about scholarship</div>
+                <button class="btn cursor view-btn">View</button>
+            </div>
+        </div>
+    </div> -->
 </body>
+
 </html>

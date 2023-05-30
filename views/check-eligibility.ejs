@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scholarships</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/check-eligibility.css">
+</head>
+<body>
+    <h1>Scholarships</h1>
+    <div class="scholarship-container">
+        <% scholarships.forEach(function(scholarship) { %>
+            <% if (checkEligibility(scholarship)) { %>
+                <div class="scholarship-item">
+                    <h3 class="scholarship-name"><%= scholarship.name %></h3>
+                    <div class="nation blank">Who Can Apply: <span><%= scholarship.nationality %></span></div>
+                    <div class="last-date blank">Last Date: <span><%= scholarship.closing_date.toDateString() %></span></div>
+                    <div class="category blank">Category: <span><%= scholarship.category %></span></div>
+                    <div class="description"><%= scholarship.description %></div>
+                    <button class="btn cursor view-btn">View</button>
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
+
+    <script src="../assets/js/eligibility.js"></script>
+</body>
+</html>

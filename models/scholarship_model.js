@@ -367,3 +367,5 @@ Scholarship.insertMany(scholarships)
     console.error('Failed to create scholarships:', error);
     // Additional code to handle any errors that occurred during scholarship creation
   });
+  
+  module.exports=scholarships;

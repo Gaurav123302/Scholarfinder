@@ -9,6 +9,30 @@
 body{
     background-color: rgb(236, 228, 228);
 }
+.scholarship-container{
+    height: 95.1%;
+    width: 100%;
+   margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    scrollbar-width: none;  
+        /*  hide scrollbar for firefox  */
+    scroll-behavior: smooth;
+    /* border: 2px solid black; */
+    border-left: none;
+    background-color: rgb(236, 228, 228);
+   }
+   .scholarship-item{
+    color: white;
+    background-color: #5959b4;
+    width: 30rem;
+    height: rem;
+    padding: 8px;
+    line-height: 1.6;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 .check-container{
    margin: auto auto; 
    display: flex;
@@ -17,11 +41,11 @@ body{
    align-items: center;
    height: 100vh;
 }
-.check-container h3{
+/* .check-container h3{
     margin-top: 4rem;
     font-size: 22px;
     color: var(--main-color);
-}
+} */
 #form{
     color: white;
 background-color: var(--main-color);
@@ -64,4 +88,33 @@ border-radius: 10px;
 .check-btn{
     margin-left: 170px;
     cursor: pointer;
+}
+.pair{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
+.view-btn{
+    /* margin-left: 22rem; */
+    color: var(--main-color);
+    position: sticky;
+    top: 139rem;
+    left: 95rem;
+}
+.blank{
+    font-weight: bold;
+    font-size: 14px;
+}
+.scholarship-name{
+    font-size: 19px;
+}
+.blank span{
+    font-weight: lighter;
+}
+.description{
+    height: 80px;
+    width: 100%;
 }

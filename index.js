@@ -2,6 +2,7 @@ const express = require('express');
 const port = 5600;
 const path = require('path');
 const ejs = require('ejs');
+const scholarships=require('./models/scholarship_model');
 
 //connection to the databases
 const connect = require('./config/scholarship_details');
@@ -15,20 +16,21 @@ const app = express();
 // parser is used to read data enterd by user and store it.
 app.use(express.urlencoded());
 app.use(express.json());
-app.set('view-engine','ejs');
 
 //to use css using static
 app.use(express.static(path.join(__dirname, '/assets')));
 
+app.set('view engine','ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Route to display the HTML page
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   });
 
-app.get('/eligibility',(req,res) =>{
-    res.sendFile(__dirname + '/check-eligibility.html');
-});
+// app.get('/eligibility',(req,res) =>{
+//     res.sendFile(__dirname + '/check-eligibility.html');
+// });
 
 app.get('/privacy-policy',(req,res) =>{
   res.sendFile(__dirname + '/privacy-policy.html');
@@ -41,6 +43,14 @@ app.get('/contact-us',(req,res) =>{
 app.get('/about',(req,res) =>{
   res.sendFile(__dirname + '/about.html');
 });
+
+app.get('/eligibility', async (req,res)=>{
+    const sc = await Scholarship.find({})
+    console.log(sc);
+    res.render('check-eligibility', {
+      data: sc
+    });
+})
 
 
 // app.post('/scholarships',(req,res) =>{
@@ -73,6 +83,8 @@ app.post('/api/scholarships', (req, res) => {
   };
 
   // Query the scholarships collection in MongoDB with the filter
+  
+
   Scholarship.find(filter)
     .then((scholarships) => {
       res.json(scholarships);

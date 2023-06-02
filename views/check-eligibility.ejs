@@ -2,25 +2,85 @@
 <html>
 <head>
     <title>Scholarships</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/check-eligibility.css">
+    <link rel="stylesheet" href="/css/check-eligibility.css">
 </head>
 <body>
-    <h1>Scholarships</h1>
-    <div class="scholarship-container">
-        <% scholarships.forEach(function(scholarship) { %>
-            <% if (checkEligibility(scholarship)) { %>
-                <div class="scholarship-item">
-                    <h3 class="scholarship-name"><%= scholarship.name %></h3>
-                    <div class="nation blank">Who Can Apply: <span><%= scholarship.nationality %></span></div>
-                    <div class="last-date blank">Last Date: <span><%= scholarship.closing_date.toDateString() %></span></div>
-                    <div class="category blank">Category: <span><%= scholarship.category %></span></div>
-                    <div class="description"><%= scholarship.description %></div>
-                    <button class="btn cursor view-btn">View</button>
-                </div>
-            <% } %>
-        <% }) %>
-    </div>
+    <div class="check-container">
+        <h3>Check Eligibility</h3>
+        <form action="#" id="form">
+            <div>
+                <label for="income">Enter Annual Family Income</label>
+                <input type="text" id="income" placeholder="for eg: 100000" class="ifd">
+            </div>
 
-    <script src="../assets/js/eligibility.js"></script>
+            <div>
+                <label for="nationality">Enter your Nationality</label>
+                <input type="text" id="nationality" placeholder="for eg: india" class="ifd">
+            </div>
+
+            <div>
+                <label for="Choose-Caste">Coose Your Caste</label>
+                <select name="Caste" id="Choose-Caste" class="ifd">
+                    <option value="sc">SC</option>
+                    <option value="st">ST</option>
+                    <option value="obc">OBC</option>
+                    <option value="ews">EWS</option>
+                    <option value="gen">GEN</option>
+                    <option value="other">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">Enter Your State</label>
+                <input type="text" id="state" placeholder="for eg: haryana" class="ifd">
+            </div>
+
+            <div>
+                <label for="education">Choose Your Qualification</label>
+                <select name="education" id="education" class="ifd">
+                    <option value="below 10th">Below 10th Standard</option>
+                    <option value="10th">10th pass</option>
+                    <option value="12th">12th pass</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="graduation">Graduation</option>
+                    <option value="post graduation">Post Graduation</option>
+                    <option value="phd">PHD</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <p class="hd-disability">Any Physical Disability?</p>
+                <label for="yes" class="lbl-yes">YES</label><input type="radio" value="yes" id="yes"
+                    name="disability"><label for="no">NO</label><input type="radio" value="no" id="no"
+                    name="disability">
+            </div>
+
+            <div>
+                <input type="reset" value="reset" class="btn reset-btn">
+                <input id="submit" type="submit" value="Check" class="btn check-btn">
+            </div>
+
+        </form>
+
+    <h1>Scholarships</h1>
+    <div class="pair">
+        <% for(let i of data) { %>
+            
+            <div class="scholarship-item">
+                <h3 class="scholarship-name"><%= i.name %></h3>
+                <div class="nation blank">Who Can Apply: <span><%= i.nationality %></span></div>
+                <div class="last-date blank">Last Date: <span><%= i.closing_date %></span></div>
+                <div class="category blank">Category: <span><%= i.category %></span></div>
+                <div class="description"><%= i.description %></div>
+                <a href="<%= i.pdf_url %>" target="_blank" class="btn cursor view-btn">View</a>
+
+            </div>
+            
+            <% } %>
+    
+        </div>
+
+    <script src="/js/eligibility.js"></script>
 </body>
 </html>
